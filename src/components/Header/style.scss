@@ -1,0 +1,173 @@
+@import '../../static/css/mixin';
+
+.header {
+    height: 58px;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    min-width: 1180px;
+    position: relative;
+    .logo {
+        width: 110px;
+        flex: 0 0 110px;
+        height: 58px;
+        & > img {
+            display: block;
+            height: 100%;
+        }
+    }
+    .container {
+        width: 960px;
+        margin: auto;
+        flex: 0 0 960px;
+        display: flex;
+        .nav {
+            display: flex;
+            align-items: center;
+            .nav-item {
+                margin-right: 30px;
+            }
+        }
+        .search {
+            position: relative;
+            display: flex;
+            padding-left: 20px;
+            align-items: center;
+            width: 160px;
+            height: 38px;
+            background: #eee;
+            border-radius: 38px;
+            transition: width 200ms ease;
+            .inp {
+                border: none;
+                flex: 1;
+                outline: none;
+                height: 28px;
+                width: calc(100% - 20px);
+                font-size: 14px;
+                background: #eee;
+            }
+            .iconfont {
+                width: 38px;
+                height: 38px;
+                line-height: 38px;
+                border-radius: 38px;
+                text-align: center;
+                transition: background 500ms ease;
+            }
+            &.foucsed {
+                width: 220px;
+                .icon-sousuo {
+                    background: rgba(0, 0, 0, 0.1);
+                }
+            }
+            .search-hot {
+                position: absolute;
+                top: 48px;
+                left: 0;
+                width: 200px;
+                padding: 20px;
+                z-index: 2;
+                border-radius: 2px;
+                background-color: #fff;
+                box-shadow: 0 0 8px rgba(0,0,0,.2);
+                .triangle-up {
+                    @include triangle_border(up, #fff, 10);
+                    position: absolute;
+                    top: -8px;
+                    left: 25px;
+                    z-index: 1;
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 10px;
+                    z-index: 2;
+                    border-radius: 2px;
+                    background: #fff;
+                }
+                .hot-title {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 14px;
+                    color: #999;
+                    .change {
+                        cursor: pointer;
+                        .icon-fresh {
+                            display: inline-block;
+                            margin-right: 5px;
+                            font-size: 18px;
+                            height: 18px;
+                            width: 18px;
+                            line-height: 1;
+                            vertical-align: -2px;
+                            transition: all .3s ease-in;
+                            transform-origin: center center;
+                        }
+                    }
+                }
+                .hot-list {
+                    display: flex;
+                    flex-wrap: wrap;
+                    font-size: 12px;
+                    color: #aaa;
+                    & > li {
+                        margin: 10px 10px 0 0;
+                        padding: 5px 6px;
+                        border: 1px solid #aaa;
+                        border-radius: 2px;
+                        box-sizing: border-box;
+                    }
+                }
+            }
+        }
+    }
+    .blank {
+        width: 110px;
+        flex: 0 0 110px;
+    }
+    .btns {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 58px;
+        display: flex;
+        .text {
+            line-height: 58px;
+            font-size: 16px;
+            color: #666;
+            margin-right: 20px;
+            &.iconfont {
+                font-size: 26px;
+            }
+        }
+        .btn {
+            height: 40px;
+            margin-right: 20px;
+            margin-top: 8px;
+            padding: 0 25px;
+            border-radius: 40px;
+            line-height: 38px;
+            border: 1px solid #ea6f5a;
+            box-sizing: border-box; 
+            color: #ea6f5a;
+            cursor: pointer;
+            &.fill {
+                background: #ea6f5a;
+                color: #fff;
+            }
+            .iconfont {
+                margin-right: 10px;
+                font-size: 20px;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+

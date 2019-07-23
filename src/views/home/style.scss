@@ -1,0 +1,35 @@
+.home-container {
+    display: flex;
+    width: 960px;
+    margin: 30px auto;
+    .home-left {
+        width: 640px;
+        flex: 0 0 640px;
+        .react-id-swiper {
+            margin-bottom: 15px;
+        }
+        .home-topic {
+            .topic-container {
+                margin-top: 15px;
+                margin-right: 30px;
+            }
+            .home-topic-more {
+                display: inline-block;
+                vertical-align: top;
+                margin-top: 23px;
+                font-size: 14px;
+                color: #999;
+                cursor: pointer;
+            }
+        }
+        .art-list {
+            padding: 30px 0;
+        }
+    }
+    .home-right {
+        width: 280px;
+        flex: 0 0 280px;
+        margin-left: 40px;
+        background: #ccc;
+    }
+}
